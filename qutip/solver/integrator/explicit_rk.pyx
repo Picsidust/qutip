@@ -52,7 +52,7 @@ cdef Data copy_to(Data in_, Data out):
 cdef Data iadd_data(Data left, Data right, double complex factor):
     # left += right * factor
     # reusing `left' allocated buffer if possible.
-    # TODO: when/if iadd_csr is added: move to data/add.pyx.
+    """TODO: when/if iadd_csr is added: move to data/add.pyx."""
     if factor == 0:
         return left
     if type(left) is Dense and type(right) is Dense:
